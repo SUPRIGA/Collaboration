@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"  />
+
+<style type="text/css">
+	
+	@CHARSET "UTF-8";
+
+
+body {
+	background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    ul{
+        padding: 0;
+        list-style: none;
+        background:	#191970;
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 40px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 6px 25px;
+         color: #F0FFFF;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #0000FF;
+        background :#F0FFFF ;
+    }
+    ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background:#6A5ACD;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+        	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+   
+}
+</style>
+	
+	
+</head>
+<body ng-app="myApp">
+<nav class="navbar navbar-inverse"  >
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				
+			</div>
+
+			<div id="navbar-collapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a class="navbar-brand" href="#">Welcome &#9662</a></li>
+					<li><a href="#/">Home &#9662</a></li>
+					<li><a href="#/login" >login &#9662</a></li>
+			<li><a href="#/register">Register &#9662</a></li>
+		
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/blog">Create Blog</a></li>
+          <li><a href="#">View Blog</a></li>
+        </ul>
+		</li>					
+			
+		
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Job <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/job">Post Job</a></li>
+          <li><a href="#">View Job</a></li>
+        </ul>
+		</li>		
+			
+			
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Forum<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/forum">Create Forum</a></li>
+          <li><a href="#">View Forum</a></li>
+        </ul>
+		</li>	
+			
+			
+			
+			
+			
+							
+			</ul>				
+			
+			</div>
+		
+		</div>
+	
+	</nav>
+<div class="container">
+<div ng-view></div>
+
+</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/usercontroller.js"></script>
+	<script type="text/javascript" src="js/userservice.js"></script>
+	<script type="text/javascript" src="js/blogcontroller.js"></script>
+	<script type="text/javascript" src="js/blogservice.js"></script>
+	<script type="text/javascript" src="js/jobservice.js"></script>
+	<script type="text/javascript" src="js/jobcontroller.js"></script>
+	<script type="text/javascript" src="js/forumservice.js"></script>
+	<script type="text/javascript" src="js/forumcontroller.js"></script>
+	
+	
+</html>
+</body>
+</html>
