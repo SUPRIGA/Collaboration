@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.collaboration.model.Blog;
-import com.niit.collaboration.model.Person;
+import com.niit.collaboration.model.User;
 
 @Repository("BlogDAO")
 public class BlogDAOImpl implements BlogDAO {
@@ -56,7 +56,7 @@ public class BlogDAOImpl implements BlogDAO {
 Session session=sessionFactory.openSession();
 		
 		System.out.println("Id of Blog is " +blog.getBlog_id());
-		if(session.get(Person.class, id)==null)
+		if(session.get(User.class, id)==null)
 		return null;
 		session.merge(blog); 
 		

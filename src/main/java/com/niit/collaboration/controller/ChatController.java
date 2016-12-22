@@ -86,7 +86,7 @@ public class ChatController {
 		
 	}
 	@RequestMapping(value="chat/{id}",method=RequestMethod.DELETE)
-	public ResponseEntity<Void> deleteBlog(@PathVariable int id){
+	public ResponseEntity<Void> deleteChat(@PathVariable int id){
 		Chat chat=chatDAO.getChat(id);
 		if(chat==null)
 			return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);

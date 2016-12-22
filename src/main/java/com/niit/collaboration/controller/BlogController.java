@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.niit.collaboration.model.Blog;
-
 import com.niit.collaboration.service.BlogDAO;
 
 

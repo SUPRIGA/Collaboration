@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan("com.niit.collaboration.*")
 public class WebAppConfig extends WebMvcConfigurerAdapter{
 
-	@Bean 
+@Bean 
 	
 	public InternalResourceViewResolver viewResolver() {
 		
@@ -25,4 +25,6 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
 	}
+	
+	
 }

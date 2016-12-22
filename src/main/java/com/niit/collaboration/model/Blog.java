@@ -1,6 +1,6 @@
 package com.niit.collaboration.model;
 
-import java.sql.Time;
+
 import java.util.Date;
 
 import javax.persistence.Column;

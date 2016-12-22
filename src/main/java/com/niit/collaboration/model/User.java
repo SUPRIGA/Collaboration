@@ -10,15 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="personinfo")
-public class Person {
+@Table(name="userinfo")
+public class User {
 	
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int person_id;
+	private int user_id;
 	@Column
-	private String person_name;
+	private String user_name;
 	@Column
 	private Date dob;
 	@Column
@@ -29,19 +29,30 @@ public class Person {
 	private String password;
 	@Column
 	private Long mobile_number;
+	@Column
+	private String role;
 	
 	
-	public int getPerson_id() {
-		return person_id;
+	
+	
+	public String getRole() {
+		return role;
 	}
-	public void setPerson_id(int person_id) {
-		this.person_id = person_id;
+	public void setRole(String role) {
+		this.role = role;
 	}
-	public String getPerson_name() {
-		return person_name;
+	
+	public int getUser_id() {
+		return user_id;
 	}
-	public void setPerson_name(String person_name) {
-		this.person_name = person_name;
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+	public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 	public Date getDob() {
 		return dob;
@@ -73,7 +84,7 @@ public class Person {
 	public void setMobile_number(Long mobile_number) {
 		this.mobile_number = mobile_number;
 	}
-	
-	
 
+	
+	
 }

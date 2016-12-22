@@ -14,6 +14,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.niit.collaboration.model.Blog;
 import com.niit.collaboration.model.Chat;
@@ -21,19 +22,21 @@ import com.niit.collaboration.model.Event;
 import com.niit.collaboration.model.Forum;
 import com.niit.collaboration.model.FriendList;
 import com.niit.collaboration.model.Job;
-import com.niit.collaboration.model.Person;
+import com.niit.collaboration.model.User;
 import com.niit.collaboration.service.BlogDAOImpl;
 import com.niit.collaboration.service.ChatDAOImpl;
 import com.niit.collaboration.service.EventDAOImpl;
 import com.niit.collaboration.service.ForumDAOImpl;
 import com.niit.collaboration.service.FriendListDAOImpl;
 import com.niit.collaboration.service.JobDAOImpl;
-import com.niit.collaboration.service.PersonDAOImpl;
+import com.niit.collaboration.service.UserDAOImpl;
+
 
 
 
 
 @Configuration
+@EnableWebMvc
 @ComponentScan("com.niit.collaboration.*")
 @EnableTransactionManagement
 public class DBConfig {
@@ -68,7 +71,7 @@ public class DBConfig {
 		LocalSessionFactoryBuilder sessionBuilder=new LocalSessionFactoryBuilder(dataSource);
 		  sessionBuilder.addProperties(getHibernateProperties());
 		  
-		  sessionBuilder.addAnnotatedClass(Person.class);
+		  sessionBuilder.addAnnotatedClass(User.class);
 		  sessionBuilder.addAnnotatedClass(Blog.class);
 		  sessionBuilder.addAnnotatedClass(Chat.class);
 		  sessionBuilder.addAnnotatedClass(Event.class);
@@ -90,9 +93,9 @@ public class DBConfig {
 	
 	
 	  @Autowired(required=true)  
-	    @Bean(name="personDAO")
-	    public PersonDAOImpl getPersonDAO(SessionFactory sessionFactory) {
-		      return new PersonDAOImpl(sessionFactory);
+	    @Bean(name="userDAO")
+	    public UserDAOImpl getUserDAO(SessionFactory sessionFactory) {
+		      return new UserDAOImpl(sessionFactory);
 	    }
 	  
 
